@@ -1,14 +1,22 @@
 {
   "name": "element-lookup",
-  "version": "0.1.0",
+  "description": "Element Lookup, an app that serves as a search engine of the Periodic Table can help you in whatever chemistry homework. It shows the details of the element such as symbol, atomic number, atomic mass, appearance and the scientist who discovered it.",
+  "version": "1.0.0",
   "private": true,
   "main": "main.js",
+  "author": {
+    "name": "Ninja77030",
+    "email": "n77030@outlook.com"
+  },
   "scripts": {
     "start": "electron .",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:electron": "electron-builder --win --linux",
     "lint": "vue-cli-service lint"
+  },
+  "bin": {
+    "element-lookup": "element-lookup-linux-x64/element-lookup"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -22,8 +30,10 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "electron": "^21.2.0",
-    "electron-packager": "^17.1.0",
+    "electron": "^6.1.12",
+    "electron-builder": "^23.6.0",
+    "electron-installer-snap": "^5.2.0",
+    "electron-packager": "^15.4.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3"
   },
