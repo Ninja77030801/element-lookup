@@ -1,6 +1,14 @@
 <template>
   <h1>Element Lookup</h1>
-  <input type="text" v-model="wantedElementName" @keyup.enter="LookupElement"><button @click="LookupElement">Search</button>
+  Search by: <select v-model="lookupMethod">
+    <option selected value="name">Name</option>
+    <option value="symbol">Symbol</option>
+    <option value="number">Number</option>
+  </select><br />
+  <input v-if="lookupMethod == 'name'" type="text" placeholder="Search by name" v-model="wantedElementInfo" @keyup.enter="LookupElement">
+  <input v-if="lookupMethod == 'symbol'" placeholder="Search by symbol" v-model="wantedElementInfo" @keyup.enter="LookupElement" type="text">
+  <input v-if="lookupMethod == 'number'" placeholder="Search by atomic number" v-model="wantedElementInfo" @keyup.enter="LookupElement" type="text">
+  <button @click="LookupElement">Search</button>
   <div v-if="searchComplete">
     <h1>{{ name }}</h1>
     Symbol: {{ symbol }}<br />
@@ -10,14 +18,14 @@
     Discovered by {{ discoveredBy }}
   </div>
 </template>
-
 <script>
 import * as npt from 'node-periodic-table'
 export default {
   name: 'App',
   data(){
     return {
-      wantedElementName: "",
+      lookupMethod: "",
+      wantedElementInfo: "",
       name: "",
       number: "",
       appearance: "",
@@ -29,7 +37,18 @@ export default {
   },
   methods: {
     LookupElement(){
-      var wantedElement = npt.getByName(this.wantedElementName)
+      var wantedElement
+      switch(this.lookupMethod){
+        case 'name':
+          wantedElement = npt.getByName(this.wantedElementInfo)
+          break
+        case 'symbol':
+          wantedElement = npt.getBySymbol(this.wantedElementInfo)
+          break
+        case 'number':
+          wantedElement = npt.getByNumber(this.wantedElementInfo)
+          break
+      }
       this.name = wantedElement.name
       this.number = wantedElement.number
       this.appearance = wantedElement.appearance
