@@ -19,6 +19,7 @@
     "element-lookup": "element-lookup-linux-x64/element-lookup"
   },
   "dependencies": {
+    "bulma": "^0.9.4",
     "core-js": "^3.8.3",
     "fs": "^0.0.1-security",
     "node-periodic-table": "^0.0.6",
