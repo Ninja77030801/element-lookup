@@ -25,6 +25,8 @@
 </template>
 <script>
 import * as npt from 'node-periodic-table'
+import { analytics } from "./firebase"
+import { logEvent } from "firebase/analytics"
 export default {
   name: 'App',
   data(){
@@ -66,7 +68,13 @@ export default {
       catch(error){
         alert(error)
       }
+      finally {
+        logEvent(analytics, "search_element", { wantedElement: this.wantedElementInfo })
+      }
     }
+  },
+  mounted(){
+    logEvent(analytics, 'page_view')
   }
 }
 </script>
