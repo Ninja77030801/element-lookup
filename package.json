@@ -21,6 +21,7 @@
   "dependencies": {
     "bulma": "^0.9.4",
     "core-js": "^3.8.3",
+    "firebase": "^10.5.0",
     "fs": "^0.0.1-security",
     "node-periodic-table": "^0.0.6",
     "vue": "^3.2.13"
@@ -31,7 +32,6 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "electron": "^6.1.12",
     "electron-builder": "^23.6.0",
     "electron-installer-snap": "^5.2.0",
     "electron-packager": "^15.4.0",
