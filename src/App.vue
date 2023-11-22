@@ -19,9 +19,6 @@
     Appearance: {{ appearance || "Not given" }}<br />
     Discovered by {{ discoveredBy }}
   </div>
-  <div style="margin-top: 40%;">
-    <a style="margin-left: 80%" href="https://ninja77030801.netlify.app" target="_blank"><button class="button is-link">About the developer</button></a>
-  </div>
 </template>
 <script>
 import * as npt from 'node-periodic-table'
