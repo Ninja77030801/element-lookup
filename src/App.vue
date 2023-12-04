@@ -17,6 +17,7 @@
     Atomic number: {{ number }}<br />
     Atomic mass number: {{ mass }}<br />
     Appearance: {{ appearance || "Not given" }}<br />
+    Electronic Configuration: {{ eConfiguration }} <br />
     Discovered by {{ discoveredBy }}
   </div>
 </template>
@@ -36,6 +37,7 @@ export default {
       mass: "",
       symbol: "",
       discoveredBy: "",
+      eConfiguration: "",
       searchComplete: false,
     }
   },
@@ -60,6 +62,7 @@ export default {
         this.mass = wantedElement.atomic_mass
         this.symbol = wantedElement.symbol
         this.discoveredBy = wantedElement.discovered_by
+        this.eConfiguration = wantedElement.electron_configuration
         this.searchComplete = true
       }
       catch(error){
