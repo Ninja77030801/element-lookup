@@ -1,10 +1,5 @@
-# element-lookup
-![Badge](https://badgen.net/badge/element-lookup/1.0.0/blue)
+# Vue 3 + Vite
 
-A web and desktop app that helps in searching for elements from the Periodic Table
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## How to use
-1. Access the web page on https://element-lookup.netlify.app and select the drop down option on how to search. Options are by name, symbol or atomic number
-2. Once chosen to search by name/symbol/number, type the name/symbol/number of the element.
-3. Click the "search" button or press the enter key.
-4. Look at the information displayed below.
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
