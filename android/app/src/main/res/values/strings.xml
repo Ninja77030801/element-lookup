@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">element-lookup</string>
+    <string name="title_activity_main">element-lookup</string>
+    <string name="package_name">com.ninja77030.elementlookup</string>
+    <string name="custom_url_scheme">com.ninja77030.elementlookup</string>
+</resources>
